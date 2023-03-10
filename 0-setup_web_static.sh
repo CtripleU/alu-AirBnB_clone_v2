@@ -14,8 +14,8 @@ echo "<html><head></head><body>Holberton School</body></html>" | sudo tee /data/
 # create symbolic link
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 # update permissions
-chown -R ubuntu:ubuntu /data/
+sudo chown -R ubuntu:ubuntu /data/
 # update Nginx config
-sed -i '38i\\tlocation /hbnb_static/ {\n\t\talias /data/web_static/current/;\n\t\tautoindex off;\n\t}\n' /etc/nginx/sites-available/default
+sudo sed -i '38i\\tlocation /hbnb_static/ {\n\t\talias /data/web_static/current/;\n\t\tautoindex off;\n\t}\n' /etc/nginx/sites-available/default
 # restart Nginx
-service nginx restart
+sudo service nginx restart
