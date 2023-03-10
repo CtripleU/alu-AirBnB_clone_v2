@@ -8,7 +8,7 @@ import os
 from fabric.api import *
 from os.path import exists, basename
 
-env.hosts = ['54.227.116.219', '54.91.78.136']
+env.hosts = ['3.85.226.164', '54.172.241.41']
 env.user = 'ubuntu'
 
 
