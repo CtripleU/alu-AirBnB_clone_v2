@@ -6,12 +6,12 @@ import os
 import shlex
 
 
-env.hosts = ['54.227.116.219', '54.91.78.136']
-env.user = "ubuntu"
+env.hosts = ['3.85.226.164', '54.172.241.41']
+env.user = 'ubuntu'
 
 
 def deploy():
-    """ DEPLOYS """
+    """ doc """
     try:
         archive_path = do_pack()
     except:
@@ -21,6 +21,7 @@ def deploy():
 
 
 def do_pack():
+    """ doc """
     try:
         if not os.path.exists("versions"):
             local('mkdir versions')
@@ -34,9 +35,7 @@ def do_pack():
 
 
 def do_deploy(archive_path):
-    """ 
-    Creates and distributes an archive to the web servers
-    """
+    """ doc """
     if not os.path.exists(archive_path):
         return False
     try:
